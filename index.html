@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="shortcut icon" href="icons/key.png" type="image/x-icon" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="loader" id="loader">
+      <div class="outer"></div>
+    </div>
+    <div class="main">
+      <div class="message" id="message">
+        <div class="symbol" id="symbol"></div>
+        <div class="alert">
+          <p id="text-message"></p>
+        </div>
+      </div>
+      <div class="panel" id="panel">
+        <div class="heading">
+          <p>Password Generator</p>
+        </div>
+        <div class="password">
+          <div class="result" id="result">PASSWORD</div>
+          <div class="copy">
+            <img src="icons/copy (1).png" class="copy-image" id="copy" />
+          </div>
+        </div>
+        <div class="showLength">
+          <div class="first"><p>Length :</p></div>
+          <div class="second"><p id="strength"></p></div>
+        </div>
+        <div class="slider">
+          <label for="length" class="label">1</label>
+          <input
+            type="range"
+            min="1"
+            max="32"
+            class="length"
+            name="length"
+            id="length"
+          />
+          <label for="length" class="label">32</label>
+        </div>
+        <div class="selection">
+          <div class="setting">
+            <p>Include Uppercase</p>
+          </div>
+          <div class="toggle">
+            <div class="check" id="UC" name="false"></div>
+          </div>
+        </div>
+        <div class="selection">
+          <div class="setting">
+            <p>Include Lowercase</p>
+          </div>
+          <div class="toggle">
+            <div class="check" id="LC" name="false"></div>
+          </div>
+        </div>
+        <div class="selection">
+          <div class="setting">
+            <p>Include Numbers</p>
+          </div>
+          <div class="toggle">
+            <div class="check" id="N" name="false"></div>
+          </div>
+        </div>
+        <div class="selection">
+          <div class="setting">
+            <p>Include Symbols</p>
+          </div>
+          <div class="toggle">
+            <div class="check" id="SS" name="false"></div>
+          </div>
+        </div>
+        <div class="btn">
+          <button class="generate-btn" id="generate">Generate Password</button>
+        </div>
+        <p id="name"><i>Tanmay Gangwar</i></p>
+      </div>
+    </div>
+    <script>
+      let panel = document.getElementById("panel");
+      let loader = document.getElementById("loader");
+
+      window.onload = function () {
+        loader.style.display = "none";
+        panel.style.display = "initial";
+      };
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
